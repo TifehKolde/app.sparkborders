@@ -1,0 +1,82 @@
+/* ✅ All imports must come first */
+@import "tailwindcss";
+
+/* globals.css or main.css */
+@theme {
+  /* Custom Colors */
+  --color-primary: #FFBF00;
+  --color-navy: #00008b;
+  --color-green: #6CB36C;
+  --color-custom-black: #475467;
+  
+  /* Custom Fonts */
+  --font-sans: "Inter", sans-serif;
+  --font-headings: "Bricolage Grotesque", sans-serif;
+  
+  /* Custom Breakpoints */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+}
+
+/* Apply to body */
+body {
+  font-family: theme(--font-sans);
+}
+
+/* Optional: set headings globally */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Move dots outside the image */
+.swiper {
+  padding-bottom: 40px; /* space for dots */
+}
+
+.swiper-pagination {
+  bottom: 0 !important; /* position below slides */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Non-active bullets as circles */
+.swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #E8ECF0;
+  opacity: 0.5;
+  margin: 0 4px !important;
+  transition: all 0.3s;
+}
+
+/* Active bullet: rectangle */
+.swiper-pagination-bullet-active {
+  width: 24px;
+  height: 8px;
+  border-radius: 4px;
+  background-color: #E8ECF0;
+  opacity: 1;
+}
